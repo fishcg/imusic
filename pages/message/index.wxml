@@ -1,0 +1,44 @@
+
+<!--index.wxml-->
+<view class="container1">
+  <view class="title">
+    <image class="back" src="/images/back.png"></image>
+    <text>我的消息</text>
+  </view>
+  <view class="category">
+    <text class="prise {{select == 1 ? 'active':''}}" bindtap="activeChange">评论</text>
+    <text class="prise {{select == 0 ? 'active':''}}" bindtap="activeChange">私信</text>
+  </view>
+  <navigator url="/pages/messageview/index" hover-class="navigator-hover" class="list">
+    <image class="icon" src="/images/yinqian.jpg"></image>
+    <view class="text">
+      <text class="name">进击的欠鹅君</text>
+      <text> 在《平凡的世界读后感》里回复了您</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/messageview/index" hover-class="navigator-hover" class="list">
+    <image class="icon" src="/images/ez.jpg"></image>
+    <view class="text">
+      <text class="name">伊泽瑞尔</text>
+      <text> 在《世界的十种规则》里回复了您</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/messageview/index" hover-class="navigator-hover" class="list">
+    <image class="icon" src="/images/yinqian.jpg"></image>
+    <view class="text">
+      <text class="name">进击的欠鹅君</text>
+      <text> 在《平凡的世界读后感》里回复了您</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/messageview/index" hover-class="navigator-hover" class="list">
+    <image class="icon" src="/images/yinqian.jpg"></image>
+    <view class="text">
+      <text class="name">进击的欠鹅君</text>
+      <text> 在《平凡的世界读后感》里回复了您</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </navigator>
+</view>

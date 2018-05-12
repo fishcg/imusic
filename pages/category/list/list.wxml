@@ -1,0 +1,40 @@
+
+<!--index.wxml-->
+<block wx:if="{{length>0}}">
+ <view id="bg">
+    <image src="/images/category/bg.jpg"></image>
+</view>
+</block>
+<view class="container1">
+  <view bindtap="bindViewTap" class="userinfo">
+    <image class="backimg" src="/images/category/top.jpg"></image>
+    <view id="subject">
+      <text class="subject">{{subject}}</text>
+    </view>
+  </view>
+  <block wx:if="{{length>0}}">
+     <block wx:for="{{list}}" wx:for-index="key" wx:for-item="val">
+      <navigator url="/pages/view/view?id={{val.id}}" hover-class="navigator-hover" class="list">
+        <image class="icon" src="{{val.photo}}"></image>
+        <image class="liplay" src="/images/play3.png" />
+          <view id="textcon">
+            <text id="text" >{{val.subject}}</text>
+          </view>
+          <view class="summary">
+            <image class="play" src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <image class="comment" src="/images/prise.png" />
+             <text class="litext2">{{val.comments}}</text>
+          </view>
+      </navigator>
+        <!--分割线-->
+      <view id="fenge"></view>
+      </block>
+  </block>
+  <block wx:if="{{length==0}}">
+    <view id="nothing">
+      <image class="nothing" src="{{nothing}}"></image>
+    </view>
+  </block>
+
+</view>

@@ -1,0 +1,125 @@
+/**list.wxss**/
+.none{
+  display: none;
+}
+
+.container1{
+   font-family: "微软雅黑";
+}
+
+#searchpage{ font-family: "微软雅黑";height: 100%;box-sizing: border-box;overflow: hidden}
+#search_input{padding: 25rpx 25rpx;background-color: #5acece;height:50rpx;}
+#search_input .form{display: flex;}
+#search_input .form view{width:100%}
+#search_input input{border:1rpx solid #ececec;color: #515151;background-color: #ffffff;
+border-radius:6rpx;font-size: 28rpx;padding: 0 .5em;box-sizing: border-box;height: 60rpx;line-height: 58rpx;display: block;}
+#search_input .button{width: 70rpx;padding-left: 20rpx; flex: 0 0 50rpx;line-height: 80rpx;overflow: hidden;}
+.button button{padding: 10rpx;height:50rpx;border: none;line-height: 1;width: 50rpx;display:block;text-align: center;}
+
+/*
+<view id="content1">
+  <view id="hot">
+    <text class="tit">热门搜索</text>
+    <view class="tags">
+       <view class="tag">告白气球</view>
+    </view>
+  </view>
+  <view id="history">
+
+  </view>
+</view>
+
+*/
+#content1{
+  background:#fff;
+  font-family: "微软雅黑";
+  min-height:100%;
+  width: 100%;
+}
+#hot{
+  width:100%;
+  height:250rpx;
+ 
+}
+.tit{
+  width:98%;
+  height:60rpx;
+  line-height:60rpx;
+  color:#2f2f2f;
+  font-size: 14px;
+  padding-left: 2%;
+  border-bottom:1px solid  #ececec;
+}
+.tags{
+  width:94%;
+  height:180rpx;
+  padding: 10rpx 3% 10rpx 3%;
+}
+.tag{
+  margin-top:20rpx;
+  float:left;
+  margin-left: 30rpx;
+  border:1px solid  #5acece;
+  padding:8rpx 20rpx;
+  background: #fff;
+  font-size: 12px;
+  border-radius: 30rpx;
+  color:#5acece;
+}
+.historylist{
+}
+.hlist{
+  width:96%;
+  height:90rpx;
+  line-height:90rpx;
+  font-size: 13px;
+  padding:0 2%;
+  color:#595959;
+}
+.clearh{
+  position: absolute;
+  float:left;
+  height:40rpx;
+  width:40rpx;
+  margin-left:75%;
+  margin-top:10rpx;
+}
+#fenge {
+  background: #ececec;
+  height: 2rpx;
+  width: 100%;
+}
+.list{
+  padding: 10rpx 2%;
+  overflow: hidden;
+  width:96%;
+  height:100rpx;
+}
+.list .icon{ 
+  width: 100rpx;
+  height: 100rpx;
+  float:left;
+  border-radius: 8rpx;
+}
+#textcon{
+  float:left;
+  width:70%;
+  height: 100rpx;
+  margin-left:2%;
+  line-height:100rpx;
+}
+#text{
+  font-family: "微软雅黑";
+  font-size:15px;
+  color:#3e3e3e;
+
+
+}
+.list .next{
+  position: absolute;
+  width: 45rpx;
+  height: 45rpx;
+  float:right;
+  margin-left:6%;
+  margin-top:30rpx;
+}

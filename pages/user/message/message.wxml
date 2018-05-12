@@ -1,0 +1,55 @@
+<!--index.wxml <image class="backimg" src="{{userInfo.avatarUrl}}"></image>-->
+
+
+
+    <view class="bubbleItem">
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view class="bubble leftBubble">  
+             您好，您想反馈什么问题呢您好，您想反馈什么问题呢您好，您想反馈什么问题呢您好，您想反馈什么问题呢
+            <text class="bottomLevel"></text>  
+            <text class="topLevel"></text>  
+        </view>  
+    </view> 
+  
+  
+    <view class="bubbleItem clearfix">   
+        <text ><!--右侧的泡泡--></text>  
+        <view class="bubble rightBubble">  
+            我的播放没有声音！  
+            <text class="bottomLevel"></text>  
+            <text class="topLevel"></text>  
+        </view> 
+        <image class="avatarR" src="{{userInfo.avatarUrl}}"></image>
+    </view>  
+  
+  
+    <view class="bubbleItem">
+        <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        <view class="bubble leftBubble">  
+             我的播放没有声音！
+            <text class="bottomLevel"></text>  
+            <text class="topLevel"></text>  
+        </view>  
+    </view> 
+
+        <view class="bubbleItem clearfix">   
+        <text ><!--右侧的泡泡--></text>  
+        <view class="bubble rightBubble">  
+            我的播放没有声音！  反馈什么问题呢您好，您想反馈什么问题呢
+            <text class="bottomLevel"></text>  
+            
+        </view> 
+        <image class="avatarR" src="{{userInfo.avatarUrl}}"></image>
+    </view> 
+    <view id="prise">
+        <form bindsubmit="comment">
+          <input id="comment_input" name="content" placeholder="快说话，看我干什么(｡・`ω´･))" value="{{reset}}" confirm-type="send" bindconfirm="comment"/> 
+          <button id="send" form-type="submit" >
+            <text >发送</text>
+          </button>
+        </form>
+      </view>
+     <!--底部踮脚-->
+    <view id="bottomDian">
+    </view>
+ 

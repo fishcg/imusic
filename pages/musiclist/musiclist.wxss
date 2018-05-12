@@ -1,0 +1,106 @@
+/**list.wxss**/
+.container1{
+   font-family: "微软雅黑";
+}
+#bg{
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index: 0;
+
+}
+.bg{
+  position: fixed;
+  width:100%;
+  height:100%;
+  z-index: 0;
+  background: rgba(80,230,228,0.2);
+
+}
+.backimg{
+
+  margin:auto;
+  min-width: 100%;
+  height: 100%;
+  overflow:hidden;
+  position: absolute;
+  z-index: -1;
+  filter: url(blur.svg#blur);    
+  filter: blur(7px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}
+#title{
+  width: 100%;
+  height: 90rpx;
+  font-size:16px;
+  line-height: 90rpx;
+
+}
+.tit{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background: rgba(255,255,255,0.6);
+  color:#666464;
+}
+.clearall{
+  position: absolute;
+  width: 100%;
+  text-align:right;
+  right:20rpx;
+  font-size:14px;
+  color:#757575;
+
+}
+#list{
+  position: absolute;
+  z-index:99;
+  width:100%;
+  background: rgba(255,255,255,0.3);
+  color:#6c6c6c;
+}
+.list{
+	box-sizing: border-box;
+  border-bottom:1rpx solid #b8b8b8;
+  z-index: 333;
+
+  line-height: 80rpx;
+  width:100%;
+  height:80rpx;
+  font-size:15px;
+}
+#listcont{
+ display: inline;
+   position: absolute;
+
+}
+.list .icon{ 
+
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  float:left;
+}
+.list text{
+  color:#fff;
+  float: left;
+  margin-left: 20rpx; 
+  text-shadow:0px 0px 2px #b5f1b9;
+  
+}
+#sing{
+  float: right;
+  width: 35rpx;
+  height: 35rpx;
+  margin-left:20rpx;
+  margin-top:20rpx;
+
+}
+.list .next{
+  width: 35rpx;
+  height: 35rpx;
+  float:right;
+  margin-top:25rpx;
+  margin-right: 45rpx;
+
+}

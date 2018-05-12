@@ -1,0 +1,3 @@
+<view class="container1">
+<image class="liimg" src="{{photo}}" style="height:{{height}}px;"/>
+</view>

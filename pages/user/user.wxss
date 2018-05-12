@@ -1,0 +1,101 @@
+/**list.wxss**/
+page{
+    background-color:#f5f5f5;
+}
+.container1{
+   font-family: "微软雅黑";
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ /* background: url("/images/background.jpg");*/
+ /* background:#44B3AA;*/
+  height: 360rpx;
+  width:100%;
+}
+.backimg{
+  margin:auto;
+  min-width: 100%;
+  height: 360rpx;
+  overflow:hidden;
+  position: absolute;
+  z-index: 0;
+  filter: url(blur.svg#blur);    
+  filter: blur(7px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}
+.userinfoavatar {
+  position: relative;
+  z-index: 999;
+  width: 175rpx;
+  height: 175rpx;
+  margin-top: 40rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  position: relative;
+  margin-top: 40rpx;
+  z-index:1;
+  color: #fff;
+}
+.usermotto {
+  margin-top: 50px;
+}
+#box{
+  margin-top: 5rpx;
+  padding:0% 0.6%;
+}
+.list{
+  margin-top:5rpx;
+  float: left;
+	box-sizing: border-box;
+  overflow: hidden;
+  line-height: 100rpx;
+  width: 32.7%;
+  height: 200rpx;
+  background: #fff;
+  margin-left:0.6%; 
+}
+list:nth-child(1){
+  margin-left:0; 
+}
+.list .icon{ 
+  width: 60rpx;
+  height: 60rpx;
+  position: relative;
+  top: 30rpx;
+  left: 50%;
+  margin-left: -30rpx;
+}
+.list text{
+  position: relative;
+  left:33rpx;
+  top:85rpx;
+  font-size:15px;
+}
+/*
+.list{
+	box-sizing: border-box;
+  border-bottom:1rpx solid #CFCFCF;
+  padding:10rpx 20rpx;
+  overflow: hidden;
+  line-height: 100rpx;
+  width:100%;
+}
+.list .icon{ 
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 10rpx;
+  float:left;
+}
+.list text{
+  margin-left: 40rpx;
+}
+.list .next{
+  width: 35rpx;
+  height: 35rpx;
+  float:right;
+  margin-top: 35rpx;
+  margin-right: 20rpx;
+}*/

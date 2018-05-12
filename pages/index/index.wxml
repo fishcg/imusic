@@ -1,0 +1,248 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <navigator url="{{item.link}}" hover-class="navigator-hover">
+        <image src="{{item.url}}" class="slide-image" width="355" height="150" />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container1">
+  <!--小菜单-->
+  <view id="nav">
+    <navigator url="/pages/active/active"  class="littleNav">
+      <image src="/images/active.png" />
+      <text>活动</text>
+    </navigator>
+    <navigator url="/pages/rank/rank"  class="littleNav">
+      <image src="/images/rank.png" />
+      <text>排行</text>
+    </navigator>
+    <navigator url="/pages/search/search" class="littleNav">
+      <image src="/images/searchi.png" />
+      <text>发现</text>
+    </navigator>
+    <navigator url="/pages/task/task" class="littleNav">
+      <image src="/images/task.png" />
+      <text>任务</text>
+    </navigator>
+  </view>
+  <!--分割线-->
+  <view id="fenge"></view>
+ <!--置顶推荐-->
+  <view class="modle">
+    <view class="modleTitle">
+      <image src="/images/myin.png" />
+      <text class="modletext1">每日推荐</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent">
+      <block wx:for="{{index_sound.top}}" wx:for-item="val">
+        <navigator url="/pages/view/view?id={{val.id}}"hover-class="navigator-hover" class="modleLi">
+          <image class="liimg" src="{{val.photo}}" />
+          <image class="liplay" src="/images/play3.png" />
+          <view class="liTitle">{{val.subject}}</view>
+          <view class="liSum">
+            <image src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <text class="litext2">{{val.comment_count}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!--分割线-->
+  <view id="fenge"></view>
+  <!--频道-->
+  <view class="modle2">
+    <view class="modleTitle">
+      <image src="/images/category.png" />
+      <text class="modletext1">频道</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent2">
+      <view class="modleLi3">
+        <image class="liimg2" src="/images/other/2.jpg" />
+        <view class="collection">
+          <image class="heartImg" src="/images/heart2.png" />
+          <text>56742</text>
+        </view>
+        <view class="catoragy"><text>邻居的耳朵</text></view>
+      </view>
+      <view class="modleLi3">
+        <image class="liimg2" src="/images/other/21.jpg" />
+        <view class="collection">
+          <image class="heartImg" src="/images/heart2.png" />
+          <text>56742</text>
+        </view>
+        <view class="catoragy"><text>宁静时光</text></view>
+      </view>
+      <view class="modleLi3">
+        <image class="liimg2" src="http://chuantu.biz/t5/53/1490633417x2890174045.jpg" />
+        <view class="collection">
+          <image class="heartImg" src="/images/heart2.png" />
+          <text>56742</text>
+        </view>
+        <view class="catoragy"><text>有声漫画</text></view>
+      </view>
+      <view class="modleLi3">
+        <image class="liimg2" src="/images/other/2.jpg" />
+        <view class="collection">
+          <image class="heartImg" src="/images/heart2.png" />
+          <text>56742</text>
+        </view>
+        <view class="catoragy"><text>纵享自然</text></view>
+      </view>
+    </view>
+  </view>
+  <!-- 分割线-->
+  <view id="fenge"></view>
+  <!--ASMR-->
+  <view class="modle">
+    <view class="modleTitle">
+      <image src="/images/myin.png" />
+      <text class="modletext1">音声助眠</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent">
+      <block wx:for="{{index_sound.asmr}}" wx:for-item="val">
+        <navigator url="/pages/view/view?id={{val.id}}"hover-class="navigator-hover" class="modleLi">
+          <image class="liimg" src="{{val.photo}}" />
+          <image class="liplay" src="/images/play3.png" />
+          <view class="liTitle">{{val.subject}}</view>
+          <view class="liSum">
+            <image src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <text class="litext2">{{val.comment_count}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!--分割线-->
+  <view id="fenge"></view>
+  <!--热门歌曲-->
+  <view class="modle">
+    <view class="modleTitle">
+      <image src="/images/myin.png" />
+      <text class="modletext1">人气音声</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent">
+      <block wx:for="{{index_sound.hot}}" wx:for-item="val">
+        <navigator url="/pages/view/view?id={{val.id}}"hover-class="navigator-hover" class="modleLi">
+          <image class="liimg" src="{{val.photo}}" />
+          <image class="liplay" src="/images/play3.png" />
+          <view class="liTitle">{{val.subject}}</view>
+          <view class="liSum">
+            <image src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <text class="litext2">{{val.comment_count}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 分割线-->
+  <view id="fenge"></view>
+  <!--有声动漫-->
+  <view class="modle">
+    <view class="modleTitle">
+      <image src="/images/myin.png" />
+      <text class="modletext1">有声动漫</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent">
+      <block wx:for="{{index_sound.cartoon}}" wx:for-item="val">
+        <navigator url="/pages/view/view?id={{val.id}}"hover-class="navigator-hover" class="modleLi">
+          <image class="liimg" src="{{val.photo}}" />
+          <image class="liplay" src="/images/play3.png" />
+          <view class="liTitle">{{val.subject}}</view>
+          <view class="liSum">
+            <image src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <text class="litext2">{{val.comment_count}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 分割线-->
+  <view id="fenge"></view>
+  <!--新曲速递-->
+  <view class="modle">
+    <view class="modleTitle">
+      <image src="/images/myin.png" />
+      <text class="modletext1">新曲速递</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleContent">
+      <block wx:for="{{index_sound.new}}" wx:for-item="val">
+        <navigator url="/pages/view/view?id={{val.id}}"hover-class="navigator-hover" class="modleLi">
+          <image class="liimg" src="{{val.photo}}" />
+          <image class="liplay" src="/images/play3.png" />
+          <view class="liTitle">{{val.subject}}</view>
+          <view class="liSum">
+            <image src="/images/play2.png" />
+            <text class="litext1">{{val.views}}</text>
+            <text class="litext2">{{val.comment_count}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <!-- 分割线-->
+  <view id="fenge"></view>
+  
+  <!--推荐UP-->
+  <view class="modle3">
+    <view class="modleTitle">
+      <image src="/images/erji.png" />
+      <text class="modletext1">推荐UP</text>
+      <image src="/images/go2.png" />
+      <text class="modletext2">更多</text>
+    </view>
+    <view class="modleUp">
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">进击的...</view>
+      </view>
+
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">曼曼是...</view>
+      </view>
+
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">新月冰...</view>
+      </view>
+
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">菊花花</view>
+      </view>
+
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">王宝强...</view>
+      </view>
+
+      <view class="upLi">
+        <image class="advImg" src="/images/other/21.jpg" />
+        <view class="liTitle">色狼领...</view>
+      </view>
+    </view>
+  </view>
+</view>

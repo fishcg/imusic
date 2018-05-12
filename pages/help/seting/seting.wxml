@@ -1,0 +1,8 @@
+<view class="back" bindtap="back">返 回</view>
+<swiper indicator-dots="true" style="height:{{height}}px">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item >
+      <image src="{{item}}" class="liimg slide-image" />
+    </swiper-item>
+  </block>
+</swiper>

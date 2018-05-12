@@ -1,0 +1,33 @@
+
+<!--index.wxml-->
+<view class="container1">
+
+  <view id="bg">
+    <image class="backimg" src="{{bgimg}}"></image>
+    <view class="bg"></view>
+  </view>
+
+  <view id="title">
+    <text class="tit">播放列表</text>
+    <text class="clearall" bindtap="clearall">清空</text>
+  </view>
+
+  <view id="list">
+    <block wx:for="{{musiclist}}" wx:for-index="key" wx:for-item="val">
+      <view class="list">
+        <navigator url="/pages/view/view?id={{val[0]}}" hover-class="navigator-hover" >
+        <block wx:if="{{music_id==val[0]}}">
+          <view id="listcont">
+            <text style="color:#d91d21;text-shadow:0px 0px 0px #d91d21;">{{val[1]}}</text> 
+            <image id="sing" src="/images/list/singing.gif"/>   
+          </view>
+        </block>
+        <block wx:elif="{{music_id!=val[0]}}">      
+          <text >{{val[1]}}</text>
+        </block>
+        </navigator>
+        <image class="next" src="/images/X.png" data-key="{{key}}"  bindtap="clear"></image>   
+      </view>
+    </block>     
+  </view>
+</view>

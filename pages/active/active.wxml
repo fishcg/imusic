@@ -1,0 +1,13 @@
+<view class="container1">
+<!--<image class="liimg" src="{{huodong2}}" style="height:1200px;"/>-->
+ <view id="bg"></view>
+  <block wx:for="{{list}}" wx:for-item="val">
+    <navigator url="/pages/active/view/view?id={{val.id}}" hover-class="navigator-hover" id="list">
+        <image  src="{{val.sumurl}}" class="img"/>
+        <view class="f16">
+            <text class="topic">{{val.category}}</text>
+            <text target="_blank" class="event-title"  >{{val.subject}}</text>
+        </view>
+    </navigator>
+   </block>
+</view>

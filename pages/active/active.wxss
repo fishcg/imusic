@@ -1,0 +1,55 @@
+/**list.wxss**/
+.container1{
+   font-family: "微软雅黑";
+   
+}
+#bg{
+    background: #f6f6f6;
+    height:100%;
+    width:100%;
+    position: absolute;            
+}
+.liimg{
+  width:100%;
+  height:940px;
+}
+#list {
+    background-color: #fff;
+    box-shadow:0 2px 3px #aeaeae;
+    border-radius: 5px;
+    margin-top: 20rpx;
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+.img {
+    border: 0 none;
+    text-align: center;
+    width:100%;
+    height:170px;
+}
+.f16 {
+    color: #535353;
+    font-size: 11px;
+    height: 50rpx;
+    padding: 0 10px;
+}
+.topic{ 
+    padding: 5rpx 10rpx;
+    text-align: center;
+    height:30rpx;
+    width:60rpx;
+    background: #ff8b8e;
+    border-radius: 4px;
+    float: left;
+    color: #fff;
+}
+.event-title {
+    font-weight: 700;
+    float: left;
+    color: #535353;
+    display: block;
+    font-size: 14px;
+    margin-left: 30rpx;
+
+}

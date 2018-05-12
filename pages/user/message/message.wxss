@@ -1,0 +1,143 @@
+/**list.wxss**/
+page{
+    background-color:#f5f5f5;
+    font-family: "微软雅黑";
+    padding-left:10rpx 10rpx 0rpx 10rpx;
+}
+.avatar{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%; 
+  position: absolute;
+  margin-top:10rpx;
+}
+.avatarR{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%; 
+  position: absolute;
+  margin-top:30rpx;
+  right: 10rpx;
+}
+.bubbleDiv{  
+    width: 1000px;  
+    margin: 0 auto;  
+    height: 1000px;  
+    border: 1px solid #4a4f58;  
+}  
+.bubbleItem{  
+    width: 100%;
+    font-size: 16px;  
+}  
+.bubble{ 
+    background-image:linear-gradient(hsla(0,0%,100%, 0.6), hsla(0, 0%, 100%, 0)  30px);
+    max-width: 65%;  
+    position: relative;  
+    line-height: 45rpx;  
+    padding-left: 20rpx;  
+    padding-top: 10rpx;  
+    padding-bottom: 15rpx;  
+    border-radius: 25rpx;  
+    margin-top: 30rpx;  
+    padding-right: 20rpx;  
+    display: inline-block;  
+}  
+.leftBubble{
+    
+    position: relative;  
+    margin-left: 110rpx;  
+    border: 1rpx solid #aaa;  
+
+}  
+.leftBubble .bottomLevel{  
+    position: absolute;  
+    top: 20rpx;  
+    left: -20rpx;  
+    border-top: 20rpx solid #aaa;  
+    border-left: 20rpx solid transparent;  
+}  
+.leftBubble .topLevel{  
+    position: absolute;  
+    top: 22rpx;  
+    left: -16rpx;  
+    border-top: 20rpx solid #f8fdfc;  
+    border-left: 20rpx solid transparent;  
+    z-index: 100;  
+}  
+.rightBubble{
+    background: rgba(19,186,186,0.8);
+    color:#fff;
+    position: relative;  
+    margin-right: 120rpx;  
+    float: right;   
+}  
+.rightBubble .bottomLevel{  
+    position: absolute;  
+    top: 22rpx;  
+    right: -20rpx;  
+    border-bottom: 21rpx solid rgba(19,186,186,0.75);  
+    border-right: 21rpx solid transparent;  
+    z-index: 101; 
+}  
+.rightBubble .topLevel{ 
+    position: absolute;  
+    top: 24rpx;  
+    right: -16rpx;  
+    border-bottom: 20rpx solid rgba(19,186,186,0); 
+    border-right: 20rpx solid transparent;  
+    z-index: 0;  
+}  
+.clearfix:after {  
+    visibility: hidden;  
+    display: block;  
+    font-size: 0;  
+    content: " ";  
+    clear: both;  
+    height: 0;  
+}
+#prise{
+  position: fixed;
+  width:100%;
+  bottom: 10rpx;
+  z-index: 111;
+}
+#comment{
+  position: absolute;
+  width:96%;
+  padding:0 2% 0 2%;
+ 
+}
+#comment_input{
+   border:1px solid #e1e1e1;
+   margin:20rpx 10rpx 0 10rpx;
+   border-radius:6rpx;
+   height:60rpx;
+   width:78%;
+   font-size: 25rpx;
+   color:#cacaca;
+   padding-left: 15rpx;
+}
+#prise{
+  margin-top: 20rpx;
+}
+#send{
+  float:right;
+  width: 110rpx;
+  height: 60rpx;
+  margin:-62rpx 10rpx 0 0;
+  background: #48AD46;
+  border-radius: 5rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#fff;
+  z-index: 999;
+  font-size: 25rpx;
+}
+
+#bottomDian{
+  position: fixed;
+  height:90rpx;
+  width:100%;
+  bottom:0;
+}
+

@@ -1,0 +1,61 @@
+
+<!--index.wxml-->
+
+<view id="searchpage">
+  <view id="search_input">
+    <form bindsubmit="search">
+      <view class="form">
+        <view>
+          <input type="text" name="name" bindinput="inputext" placeholder="点我开启音乐世界" value="{{value}}" />
+        </view>
+        <view class="button">
+          <button form-type="submit" plain="true">
+            <icon type="search" size="20" color="#fff"/>
+          </button>
+        </view>
+      </view>
+    </form>
+  </view>
+</view> 
+<view id="content1" class=" {{issearch == 1 ? 'none':''}}" >
+  <view id="hot">
+    <view class="tit">热门搜索</view>
+    <view class="tags">
+      <text class="tag" data-word="告白气球" bindtap="searchword">告白气球</text>
+      <text class="tag" data-word="超人不会飞" bindtap="searchword">超人不会飞</text>
+      <text class="tag" data-word="苦瓜" bindtap="searchword">苦瓜</text>
+      <text class="tag" data-word="ASMR" bindtap="searchword">ASMR</text>
+      <text class="tag" data-word="原创" bindtap="searchword">原创</text>
+      <text class="tag" data-word="民谣" bindtap="searchword">民谣</text>
+      <text class="tag" data-word="3D" bindtap="searchword">3D</text>
+      <text class="tag" data-word="电子音乐" bindtap="searchword">电子音乐</text>
+      <text class="tag" data-word="作业向" bindtap="searchword">作业向</text>
+    </view>
+  </view>
+  <view id="history">
+     <view class="tit">
+      <text class="htit">历史搜索</text>
+      <image class="clearh" src="/images/clear.png" bindtap="clearall"></image>
+     </view>
+      <view class="historylist">
+        <block wx:for="{{historyList}}" wx:for-index="key" wx:for-item="val">
+          <view class="hlist" data-word="{{val}}" bindtap="searchword">{{val}}</view>
+        </block>  
+      </view>
+
+  </view>
+</view>
+
+<view class="container1" class=" {{issearch == 0 ? 'none':''}}">
+  <block wx:for="{{list}}" wx:for-index="key" wx:for-item="val">
+  <view hover-class="navigator-hover" class="list"  bindtap="add" data-music_id="{{val.id}}">
+    <image class="icon" src="{{val.front_cover}}"></image>
+      <view id="textcon">
+        <text id="text" >{{val.soundstr}}-{{val.username}}</text>
+      </view>    
+        <image class="next" src="/images/goo.png"></image>
+  </view>
+    <!--分割线-->
+  <view id="fenge"></view>
+  </block>
+</view>

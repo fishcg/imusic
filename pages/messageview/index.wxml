@@ -1,0 +1,34 @@
+
+<!--index.wxml-->
+<view class="container1">
+  <view class="title">
+    <image class="back" src="/images/back.png"></image>
+    <text>消息详情</text>
+  </view>
+  <view class="list">
+    <image class="icon" src="{{userInfo.avatarUrl}}"></image>
+    <text class="name">{{userInfo.nickName}} 回复于《平凡的世界读..</text>
+    <view class="text">
+      <text> 很好听</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </view>
+  <view class="replayContent">
+    <text class="name2">进击的欠鹅君</text>
+    <view class="text2">
+      <text> 谢谢你一直以来的支持</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </view>
+  <view class="replayContent">
+    <text class="name2">{{userInfo.nickName}}</text>
+    <view class="text2">
+      <text>不要熬夜了</text>
+      <text class="replayDate">2017-01-18</text>
+    </view>
+  </view>
+  <view class="replay">
+    <input type="text" placeholder="  想要回复什么.." id="replay"></input>
+    <image class="submit" src="/images/go.png"></image>
+  </view>
+</view>

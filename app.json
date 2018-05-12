@@ -1,0 +1,62 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/user/user",
+    "pages/user/siting/siting",
+    "pages/user/message/message",
+    "pages/user/feedback/feedback",
+    "pages/user/share/collect",
+    "pages/user/collect/collect",
+    "pages/musiclist/musiclist",
+    "pages/category/category",
+    "pages/category/list/list",
+    "pages/message/index",
+    "pages/messageview/index",
+    "pages/view/view",
+    "pages/active/active",
+    "pages/active/view/view",
+    "pages/task/task",
+    "pages/rank/rank",
+    "pages/search/search",
+    "pages/help/seting/seting"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#5acece",
+    "navigationBarTitleText": "i音声",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#5f5f5f",
+    "selectedColor": "#BD2D30",
+    "backgroundColor": "#F8F8F8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index2.png",
+        "selectedIconPath": "images/index.png",
+        "text": "首页"
+      },
+       {
+        "pagePath": "pages/category/category",
+        "iconPath": "images/category.png",
+        "selectedIconPath": "images/category-light.png",
+        "text": "频道"
+      },
+      {
+        "pagePath": "pages/musiclist/musiclist",
+        "iconPath": "images/musiclist.png",
+        "selectedIconPath": "images/musiclist-light.png",
+        "text": "播放列表"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user2.png",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

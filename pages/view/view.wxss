@@ -1,0 +1,810 @@
+.container1 {
+  font-family: "微软雅黑";
+  box-sizing: border-box;
+  color: #414141;
+  font-size: 14px;
+  width:100%;
+  overflow: hidden;
+}
+.none{
+  display: none;
+}
+#banner {
+  min-height: 640rpx;
+  width: 100%;
+  position: relative;
+}
+
+.title>image {
+  position: absolute;
+  z-index: 1;
+  float: left;
+  width: 30rpx;
+  height: 50rpx;
+  margin-top: 15rpx;
+  margin-left: 20rpx;
+}
+
+.backimg {
+  margin: auto;
+  min-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  filter: blur(7px);
+}
+
+.guangdie {
+  position: absolute;
+  z-index: 2;
+  width: 16%;
+  height: 120rpx;
+  margin-left: 42%;
+  margin-top: 273rpx;
+  opacity: 1;
+}
+/*歌词*/
+#lyric{
+  position: absolute;
+  width:100%;
+  z-index: 99;
+  margin-top:560rpx;
+  text-align: center;
+  color:#fff;
+  text-shadow:0px 0px 5px #1AAD19;
+}
+slider{
+  color:red;
+}
+#jindu{
+  width:80%;
+  color:red;
+}
+#time{
+  float:right;
+  margin-top:-55rpx;
+  margin-right:10rpx;
+  color:#C2C2C2;
+}
+.userinfo-avatar {
+  position: absolute;
+  z-index: 1;
+  border: 5px solid rgba(220, 229, 225, 0.4);
+  width: 47%;
+  height: 350rpx;
+  margin-left: 25%;
+  margin-top: 150rpx;
+  border-radius: 50%;
+}
+#subject{
+  width: 100%;
+  text-align:center;
+  font-size: 14px;
+  margin-top:-15rpx;
+  padding :0rpx 0rpx 8rpx 0rpx;
+}
+.playColor{
+  color:#FD4C5B;
+}
+.playColor2{
+   color:#71D38C;
+}
+#playModle {
+  min-height: 500rpx;
+  width: 100%;
+  background:#f5f5f5;
+    /*background: url("/images/other/mutou.jpg");*/
+  background-size: 100% 100%;
+  position: relative;
+}
+.playBtn {
+  position: absolute;
+  z-index: 1;
+  background: url("https://www.acgay.cn/images/imusic/btn/play-btn1.png");
+  background-size: 100% 100%;
+  width: 18.72%;
+  height: 140rpx;
+  margin-left: 40%;
+  margin-top: 180rpx;
+}
+.noplayBtn {
+  position: absolute;
+  z-index: 1;
+  background: url("https://www.acgay.cn/images/imusic/btn/stop.png");
+  background-size: 100% 100%;
+  width: 18.72%;
+  height: 140rpx;
+  margin-left: 40%;
+  margin-top: 180rpx;
+}
+.topBtn {
+  position: absolute;
+  z-index: 2;
+  background: url("https://www.acgay.cn/images/imusic/btn/top-btn1.png");
+  background-size: 100% 100%;
+  width: 32.89%;
+  height: 118rpx;
+  margin-left: 33.3%;
+  margin-top: 80rpx;
+}
+.bottomBtn {
+  position: absolute;
+  z-index: 2;
+  background: url("https://www.acgay.cn/images/imusic/btn/bottom-btn1.png");
+  background-size: 100% 100%;
+  width: 32.89%;
+  height: 118rpx;
+  margin-left: 33.3%;
+  margin-top: 304rpx;
+}
+.rightBtn {
+  position: absolute;
+  z-index: 2;
+  background: url("https://www.acgay.cn/images/imusic/btn/right-btn1.png");
+  background-size: 100% 100%;
+  width: 15.9%;
+  height: 230rpx;
+  margin-left: 56.4%;
+  margin-top: 134rpx;
+}
+.leftBtn {
+  position: absolute;
+  z-index: 2;
+  background: url("https://www.acgay.cn/images/imusic/btn/left-btn1.png");
+  background-size: 100% 100%;
+  width: 15.5%;
+  height: 233rpx;
+  margin-left: 26.9%;
+  margin-top: 134rpx;
+}
+.playBtn:active{
+  background: url("https://www.acgay.cn/images/imusic/btn/play-btn2.png");
+  background-size: 100% 100%;
+  width: 18.72%;
+  height: 140rpx;
+  margin-left: 40%;
+  margin-top: 180rpx;
+}
+noplayBtn:active {
+  background: url("https://www.acgay.cn/images/imusic/btn/play-btn2.png");
+  background-size: 100% 100%;
+  width: 18.72%;
+  height: 140rpx;
+  margin-left: 40%;
+  margin-top: 180rpx;
+}
+.leftBtn:active {
+  background: url("https://www.acgay.cn/images/imusic/btn/left-btn2.png");
+  background-size: 100% 100%;
+  width: 15.5%;
+  height: 233rpx;
+  margin-left: 26.9%;
+  margin-top: 134rpx;
+}
+
+.rightBtn:active {
+  background: url("https://www.acgay.cn/images/imusic/btn/right-btn2.png");
+  background-size: 100% 100%;
+  width: 15.9%;
+  height: 230rpx;
+  margin-left: 56.4%;
+  margin-top: 134rpx;
+}
+
+.bottomBtn:active {
+  background: url("https://www.acgay.cn/images/imusic/btn/bottom-btn2.png");
+  background-size: 100% 100%;
+  width: 32.89%;
+  height: 118rpx;
+  margin-left: 33.3%;
+  margin-top: 304rpx;
+}
+
+.topBtn:active {
+  background: url("https://www.acgay.cn/images/imusic/btn/top-btn2.png");
+  background-size: 100% 100%;
+  width: 32.89%;
+  height: 118rpx;
+  margin-left: 33.3%;
+  margin-top: 80rpx;
+}
+
+/*XXXXXX*/
+
+#nav {
+  width: 100%;
+  height: 60rpx;
+  background: #fff;
+  text-align: center;
+  margin-top: -10rpx;
+}
+
+.littleNav {
+  float: left;
+  width: 25%;
+  height:60rpx;
+}
+
+.littleNav>image {
+  margin-top: 0rpx;
+  width: 28%;
+  height:45rpx;
+}
+
+.littleNav>view {
+ font-size:10px;
+}
+
+#fenge {
+  background: #f1efef;
+  height: 5rpx;
+  width: 100%;
+  margin-top:23rpx;
+}
+
+.modle {
+  width: 100%;
+  height: 370rpx;
+  background: #fff;
+}
+
+.modle2 {
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+}
+
+.modleTitle {
+  width: 100%;
+  height: 65rpx;
+  background: #fff;
+  line-height: 65rpx;
+}
+
+.modleTitle image:nth-child(1) {
+  float: left;
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 15rpx;
+  margin-left: 12rpx;
+}
+
+.modletext1 {
+  margin-left: 12rpx;
+}
+
+.modletext2 {
+  float: right;
+  margin-right: 12rpx;
+}
+
+.modleTitle image:nth-child(3) {
+  float: right;
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 16rpx;
+  margin-right: 12rpx;
+}
+
+.modleContent {
+  padding: 0rpx 1.5%;
+}
+
+.modleLi {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  margin-top: 10rpx;
+}
+
+.modleContent view:nth-child(3n) {
+  margin-right: 0;
+}
+
+.liimg {
+  width: 100%;
+  height: 200rpx;
+  border-radius: 5%;
+}
+
+.liplay {
+  position: absolute;
+  margin-top: 125rpx;
+  margin-left: -10%;
+  z-index: 999;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.modleContent2 {
+  padding: 0rpx 1.7%;
+}
+
+.modleContent2 view:nth-child(2n) {
+  margin-right: 0;
+}
+
+.modleLi2 {
+  float: left;
+  width: 48.8%;
+  margin-right: 2%;
+  margin-top: 10rpx;
+  min-height: 280rpx;
+  position: relative;
+  color: #fff;
+}
+
+.modleLi3 {
+  float: left;
+  width: 48.8%;
+  margin-right: 2%;
+  margin-top: 10rpx;
+  min-height: 207rpx;
+  position: relative;
+  color: #fff;
+}
+
+.liimg2 {
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+  border-radius: 5%;
+  z-index: 0;
+}
+
+.liplay2 {
+  position: absolute;
+  margin-top: 125rpx;
+  margin-left: -10%;
+  z-index: 999;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+
+
+.liSum {
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.litext1 {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.litext2 {
+  color: #bbb;
+  font-size: 12px;
+  float: right;
+  margin-right: 75%;
+}
+
+.liSum image:nth-child(1) {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin: 0rpx 2% 0 0;
+}
+
+.liSum image:nth-child(4) {
+  margin: 0rpx 2% 0 0;
+  float: right;
+  width: 28rpx;
+  height: 23rpx;
+  margin-top: 4rpx;
+}
+
+.collection {
+  position: absolute;
+  width: 120rpx;
+  height: 40rpx;
+  background: rgba(52, 52, 52, 0.5);
+  right: 0;
+  text-align: center;
+  border-top-right-radius: 14%;
+}
+
+.collection text:nth-child(2) {
+  position: relative;
+  font-size: 12px;
+  margin-left: 5rpx;
+  margin-top: -10rpx;
+}
+
+.heartImg {
+  position: relative;
+  margin-top: 8rpx;
+  margin-left: 0;
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.catoragy {
+  position: absolute;
+  background: rgba(52, 52, 52, 0.5);
+  margin-top: 160rpx;
+  width: 100%;
+  height: 40rpx;
+  z-index: 1999;
+  border-bottom-left-radius: 9%;
+  border-bottom-right-radius: 9%;
+}
+
+.catoragy text:nth-child(1) {
+  margin-left: 10rpx;
+}
+
+.modle3 {
+  width: 100%;
+  height: 250rpx;
+  background: #fff;
+}
+
+.modleUp {
+  padding: 15rpx 1.7%;
+}
+
+.upLi {
+  float: left;
+  width: 16%;
+  height: 100rpx;
+  border-radius: 50%;
+  font-size: 30rpx;
+  margin-right: 0.75%;
+}
+
+.modleUp view:nth-child(6n) {
+  margin-right: 0;
+}
+
+.modleUp view:nth-child(1) {
+  margin-left: 0.27%;
+}
+
+
+/*完整版播放器*/
+
+#tab {
+ /* background: #f6f6f6;*/
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  color:#a8a8a8;
+  text-align: center;
+  font-size:14px;
+}
+.prise {
+  float: left;
+  width: 33.33%;
+}
+
+.active {
+  border-bottom: 3rpx solid #1AAC19;
+    color: #1AAC19;
+}
+#summary{
+  width:96%;
+   padding: 0 2% 0 2%;
+}
+#csubject{
+   height:50rpx;
+   width:96%;
+   font-size:16px;
+   line-height: 50rpx;
+   margin-top:8rpx;
+}
+#musicInfo{
+  margin-top:70rpx;
+  min-height:30rpx;
+  overflow:hidden; 
+}
+#summaryTextbox {
+  margin-top: 10rpx;
+
+}
+#summaryText {
+  margin-top: 30rpx;
+  font-size:12px;
+  color:#c4c4c4;
+}
+#userinfo{
+  height:120rpx;
+  margin-top: 20rpx;
+  line-height: 120rpx;
+}
+.advImg {
+  float:left;
+  width: 105rpx;
+  height: 105rpx;
+  margin-top:16rpx;
+  border-radius: 50%;
+}
+.liTitle {
+  float: left;
+  margin-left: 2%;
+   height:120rpx;
+   width:200rpx;
+   line-height: 120rpx;
+}
+.follow{
+   float: right;
+   height:60rpx;
+   width:115rpx;
+   background: #ff5151;
+   line-height: 60rpx;
+   color:#fff;
+   margin-top:30rpx;
+   margin-right:20rpx;
+   border-radius: 10%;
+   text-align: center;
+}
+.followoff{
+   float: right;
+   height:60rpx;
+   width:115rpx;
+   background: #bfbfbf;
+   line-height: 60rpx;
+   color:#fff;
+   margin-top:30rpx;
+   margin-right:20rpx;
+   border-radius: 10%;
+   text-align: center;
+}
+#backthis{
+   position: absolute;
+   z-index: 99;
+   float: left;
+   height:56rpx;
+   padding:0 15rpx 0 15rpx;
+   border:1px solid #f1f1f1;
+   opacity: 0.8;
+   line-height: 56rpx;
+   color:#fff;
+   margin-top:15rpx;
+   margin-left:80%;
+   border-radius: 10%;
+   text-align: center;
+   font-size: 12px;
+   text-shadow:0px 0px 1px #1AAD19;
+   box-shadow:0px 0px 1px #1AAD19;
+}
+.liTitle2 {
+  height: 75rpx;
+}
+.liSum2 {
+  margin-top: 3px;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.litext12 {
+  color: #bbb;
+  font-size: 12px;
+}
+
+.litext22 {
+  color: #bbb;
+  font-size: 12px;
+  float: right;
+  margin-right: 12rpx;
+}
+
+.liSum2 image:nth-child(1) {
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 0rpx;
+}
+
+.liSum2 image:nth-child(4) {
+  float: right;
+  width: 28rpx;
+  height: 23rpx;
+  margin-top: 4rpx;
+}
+#bottom{
+  height:100rpx;
+  background-color:rgba(0,0,0,0.7);
+  width:100%;
+  position:fixed;
+  bottom:0;
+}
+/*
+<image class="prvmusic" bindtap="prvmusic" src="/images/view/prv_music.png" />     
+      <image class="bplay" bindtap="audioPlay" src="{{playimg}}" />
+      <image class="bgoo"  bindtap="forward" src="/images/view/goo.png" />
+      <image class="bgoo"  bindtap="forward" src="/images/view/goo.png" />
+      <image class="nextmusic" bindtap="nextmusic" src="/images/view/next_music.png" />
+
+*/
+.prvmusic{
+     margin-left: 5%;
+   margin-bottom:10rpx;
+   height:60rpx;
+   width:60rpx;
+}
+.bback{
+   margin-left: 17%;
+   margin-bottom:10rpx;
+   height:60rpx;
+   width:60rpx;
+}
+.bplay{
+   height:80rpx;
+   width:80rpx;
+   margin: 10rpx 0 0 8%;
+}
+.bgoo{
+   margin-left: 7.8%;
+   margin-bottom:10rpx;
+   height:60rpx;
+   width:60rpx;
+}
+.nextmusic{
+   margin-left: 15%;
+   margin-bottom:10rpx;
+   height:60rpx;
+   width:60rpx;
+}
+#bottomDian{
+  height:120rpx;
+  width:100%;
+  bottom:0;
+}
+/*评论*/
+#comment{
+  width:96%;
+  padding:0 2% 0 2%;
+}
+#comment_input{
+   border:1px solid #e1e1e1;
+   margin:20rpx 0 0 0;
+   border-radius:6rpx;
+   height:60rpx;
+   width:80%;
+   font-size: 25rpx;
+   color:#cacaca;
+   padding-left: 15rpx;
+}
+#prise{
+  margin-top: 20rpx;
+}
+#send{
+  float:right;
+  width: 110rpx;
+  height: 60rpx;
+  margin:-62rpx 0 0 0;
+  background: #48AD46;
+  border-radius: 5rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color:#fff;
+  z-index: 999;
+  font-size: 25rpx;
+}
+#comment_list{
+  margin-top: 20rpx;
+  width:100%;
+}
+#commentinfo{
+  width:100%;
+  height:80rpx;
+}
+.advImg2 {
+  float:left;
+  width: 80rpx;
+  height: 75rpx;
+  border-radius: 50%;
+}
+.liTitle2 {
+  float: left;
+  margin-left: 20rpx;
+  margin-top:5rpx;
+  width:200rpx;
+  font-size: 24rpx;
+   color:#727272;
+
+}
+.liTitle3 {
+  position: absolute;
+  margin-left: 100rpx;
+  margin-top:35rpx;
+  font-size: 20rpx;
+  color:#cacaca;
+}
+#fllow2{
+   float: right;
+   margin-top:18rpx;
+   margin-right:18rpx;
+   line-height: 45rpx;
+}
+#fllow2 image {
+  float: left;
+  margin-top: 0rpx;
+  width: 40rpx;
+  height:35rpx;
+}
+#fllow2 view {
+  float: left;
+  font-size:10px;
+}
+#commentconent{
+  width:86%;
+  margin:0rpx 0 0 100rpx;
+  font-size: 25rpx;
+  color:#555555;
+}
+#nothing{
+  width:100%;
+  text-align: center;
+  margin-top:50rpx;
+}
+.nothing{
+  width:500rpx;
+  height:550rpx;
+}
+#fenge2 {
+  background: #f1efef;
+  height: 1rpx;
+  width: 100%;
+  margin-top:14rpx;
+}
+/*弹幕*/
+.barrage-fly{
+    z-index: 3;
+    height: 470rpx;
+    width: 100%;
+    position: absolute;
+    top: 80rpx;
+}
+.barrage-textFly{
+    position: absolute;
+    word-break:keep-all;
+    font-size:35rpx;
+    text-shadow:0px 0px 1px #000;
+
+}
+.slide-image{
+    width: 100%;
+}
+
+/* 弹幕选择按钮的操作*/
+
+
+/* 弹幕输入框的操作*/
+.barrage-inputText{
+   margin-top:20rpx;
+    display: flex;
+    /*background-color: #5acece;*/
+    background: url('http://wx3.sinaimg.cn/small/006wiWLZgy1fe7a4s6u1nj30aa011aac.jpg');
+    background-size:100% 100%;
+    width: 100%;
+    height: 40px;
+    flex-direction: row;
+    nav-index: 2;
+    justify-content: center;
+    align-items: center;
+    bottom: 10%;
+
+}
+.barrage-input{
+    line-height: 50px;
+    background-color: #fff;
+    width: 70%;
+    border-radius:5px;
+    height: 30px;
+    font-size:13px;
+}
+.shoot{
+    margin-left: 10px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
+    background: #5acece;
+    color:#fff;
+    text-align: center;
+    border-radius:5px;
+
+}

@@ -1,0 +1,77 @@
+<view id="body">
+<view class="subject">
+我的音币：{{zanbi}}
+</view>
+  <view  class="box" >
+    <view class="list">
+      <view class="content">
+        <view class="name">     
+          <image src="/images/task/qiandao.png" class="icon"></image>  
+           <view class="title">每日签到</view>  
+        </view>
+        <view class="summary">
+          每天签到可以领取3音币哦
+        </view>
+      </view>
+      <block wx:if="{{!isSign}}">
+        <view class="button" bindtap="sign">
+          签到
+        </view>
+      </block>
+      <block wx:if="{{isSign}}">
+        <view class="button_off">
+          已签到
+        </view>
+      </block>
+      <view class="fenge"></view>
+    </view>
+
+     <view class="list">
+      <view class="content">
+        <view class="name">     
+          <image src="/images/task/choujiang.png" class="icon"></image>  
+           <view class="title">摸 鱼</view>  
+        </view>
+        <view class="summary">
+          试试您的手气，每天有一次机会进行抽奖，有机会抽到1~10音币哦
+        </view>
+      </view>
+      <block wx:if="{{!isLottery}}">
+        <view class="button" bindtap="lottery">
+          试手气
+        </view>
+      </block>
+      <block wx:if="{{isLottery}}">
+        <view class="button_off">
+          完 成
+        </view>
+      </block>
+      <view class="fenge"></view>
+    </view>
+    <view class="list">
+      <view class="content">
+        <view class="name">     
+          <image src="/images/task/comment.png" class="icon"></image>  
+           <view class="title">评论任务</view>  
+        </view>
+        <view class="summary">
+          每天评论满3条，可以获取3音币
+        </view>
+      </view>
+       <block wx:if="{{comment_count<3}}">
+        <view class="button">
+          {{comment_count}}/3
+        </view>
+      </block>
+      <block wx:if="{{comment_count==3}}">
+        <view class="button_off">
+          3/3
+        </view>
+      </block>
+      <view class="fenge"></view>
+    </view>
+  </view>
+  <view id="qidai">
+    <image src="/images/task/qidai.png" class="qidai"></image>  
+  </view>
+</view>

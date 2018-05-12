@@ -1,0 +1,31 @@
+page{
+    background-color:#f5f5f5;
+}
+#body{
+    font-family: "微软雅黑";
+}
+.box{   
+    height:240rpx;
+    width:210rpx;
+    background:#fff;
+    margin-top:20rpx;
+    margin-bottom:10rpx;
+    margin-left:28rpx; 
+    float: left;
+    box-shadow:0 2rpx 3rpx #aeaeae;
+    text-align: center;
+    border-radius: 16rpx;
+
+}
+.icon{
+    width:80rpx;
+    height:80rpx;   
+    margin-top:45rpx; 
+    
+}
+.text{
+    width:100%;
+    margin-top:30rpx; 
+    font-size:15px;
+
+}

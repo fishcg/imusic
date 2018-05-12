@@ -1,0 +1,39 @@
+<!--index.wxml <image class="backimg" src="{{userInfo.avatarUrl}}"></image>-->
+
+<block wx:for="{{feedbacks}}" wx:for-index="key" wx:for-item="val">
+    <block wx:if="{{val['from_uid']==0}}">
+      <view class="bubbleItem">
+        <image class="avatar" src="/images/user/feedback_avatar.png"></image>
+        <view class="bubble leftBubble">  
+             <text>{{val['content']}}</text>
+            <text class="bottomLevel"></text>  
+            <text class="topLevel"></text>  
+        </view>  
+      </view> 
+    </block>
+    <block wx:elif="{{val['from_uid']!=0}}">      
+       <view class="bubbleItem clearfix">   
+        <view class="bubble rightBubble">  
+            <text>{{val['content']}}</text>
+            <text class="bottomLevel"></text>  
+            <text class="topLevel"></text>  
+        </view> 
+        <image class="avatarR" src="{{val['useravatar']}}"></image>
+      </view> 
+    </block>
+
+
+</block>  
+
+<view id="prise">
+    <form bindsubmit="comment">
+      <input id="comment_input" name="content" placeholder="快说话，看我干什么(｡・`ω´･))" value="{{reset}}" confirm-type="send" bindconfirm="comment"/> 
+      <button id="send" form-type="submit" >
+        <text >发送</text>
+      </button>
+    </form>
+  </view>
+  <!--底部踮脚-->
+<view id="bottomDian">
+</view>
+ 

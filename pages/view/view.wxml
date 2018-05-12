@@ -1,0 +1,228 @@
+<view class="container1">
+  <view id="banner">
+    <view class="title">
+      <image class="back" src="/images/back.png" bindtap="backout"></image>
+      <view id="backthis"  bindtap="tabmodule" >{{btnname}}</view>
+    </view>
+    <view bindtap="bindViewTap" class="userinfo">
+      <image class="backimg" src="{{photo}}"></image>
+      <image class="guangdie" src="/images/guangdie2.png"></image>
+      <image class="userinfo-avatar" animation="{{guangdieData}}" src="{{photo}}" background-size="cover"></image>
+    </view>
+    <view id="lyric">{{lyric}}</view>
+  </view>
+  <!--弹幕模块-->
+  <view>
+    <view class="barrage-fly" style="display:{{barragefly_display}}">
+    <block wx:for="{{barrage_style}}" wx:key="unique">
+      <text class="barrage-textFly" animation="{{danmu}}" style="color:{{item.barrage_shoottextColor}};left:{{leftwidth}}px;top:{{item.barrageText_height}}px;">{{item.barrage_shootText}}</text>
+    </block>
+    </view>
+    <!--弹幕池-->
+    <view class="barrage-fly" style="">
+    <block wx:for="{{flys}}" wx:key="unique">
+      <text class="barrage-textFly" animation="{{danmu2[item.fkey]}}" style="color:{{item.barrage_shoottextColor}};left:{{item.barrage_phoneWidth}}px;top:{{item.barrageText_height}}px;">{{item.barrage_shootText}}</text>
+    </block>
+    </view>
+     <!-- <view class="barrage-fly" style="display:{{barragefly_display}}">
+    <text class="barrage-textFly" animation="{{danmu}}" style="color:{{nbso.barrage_color}};left:{{leftwidth}}px;top:{{nbso.barrage_height}}px;">{{nbso.barrage_val}}</text>
+    </view>-->
+  </view>
+  <!--弹幕模块结束-->
+  <view  id="jindumodule">
+    <slider  id="jindu" name="slider" value="{{percentage}}" max="1000" bindchange="audioChange"></slider>
+    <text id="time"> {{time}}</text>
+  </view>
+  <!--<audio  src="{{music}}" id="myAudio" loop bindtimeupdate="jindu" class="none"></audio>-->
+  <view id="simplicity" class="{{style == 'complete' ? 'none':''}}">
+    <view id="subject" class="{{play == 'playBtn' ? 'playColor':'playColor2'}}" bindtap="audioPlay"> 
+    {{subject}}--{{author}}
+    </view>
+    <view id="playModle">
+      <view class="topBtn"  bindtap="addSound"></view>
+      <view class="rightBtn" bindtap="forward"></view>
+      <view class="{{play}}" bindtap="audioPlay"></view>
+      <view class="bottomBtn"></view>
+      <view class="leftBtn" bindtap="back"></view>
+    </view>
+  </view>
+  <view id="complete"  class="{{style == 'simplicity' ? 'none':''}}">
+    <!--小菜单-->
+    <view id="nav">
+      <view  class="littleNav">
+        <image src="{{danmuimg}}" bindtap="barrageSwitch" />
+        <view>弹幕</view>
+      </view>
+      <view  class="littleNav">
+        <image  bindtap="collect" src="{{fllowimg}}" />
+          <view>收藏</view>
+      </view>
+      <view  class="littleNav">
+        <image  bindtap="good" src="{{goodimg}}" />
+        <view>点赞</view>
+      </view>
+      <view  class="littleNav">
+        <image  bindtap="erroup" src="{{erroimg}}" />
+        <view>报错</view>
+      </view>
+    </view>
+    <!--分割线-->
+
+    <!--弹幕输入框-->
+    <view class="barrage-inputText" style="display:{{barrage_inputText}}">
+        <view class="barrage-input">
+          <input bindblur="bind_shoot" value="{{bind_shootValue}}" placeholder="发射器已备好，请长官填弹(｡・`ω´･))"/>
+        </view>
+        <view class="barrage-shoot">
+            <view class="shoot" size="mini" bindtap="shoot">发 射</view>
+        </view>
+    </view> 
+    <view id="fenge"></view>
+
+    <!--切换菜单-->
+    <view id="tab">
+      <text class="prise {{select =='summary' ? 'active':''}}" data-code="summary" bindtap="activeChange">简介</text>
+      <text class="prise {{select =='comment'? 'active':''}}" data-code="comment" bindtap="activeChange">评论({{commentNum}})</text>
+      <text class="prise {{select =='photo' ? 'active':''}}" data-code="photo" bindtap="activeChange">图片</text>
+    </view>
+    <!--简介-->
+    <view id="summary" class=" {{select !='summary' ? 'none':''}}">
+      <view id="csubject">
+      {{subject}}
+      </view>
+      <view id="musicInfo">
+        <view id="musiclog">
+          <view class="liSum">
+            <image class="playnum" src="/images/play2.png" />
+            <text class="litext1">{{views}}</text>
+            <text class="litext2">{{commentNum}}</text>
+            <image src="/images/prise.png" />
+          </view>
+        </view>
+        <view id="summaryTextbox">
+          <text id="summaryText">{{tmusic.summary ? tmusic.summary : 'up主还没有填写简介哦'}}
+          </text>
+        </view>
+      </view>
+      <!--up主-->
+      <view id="userinfo">
+        <image class="advImg" src="{{user.user_avatar}}" />
+        <view class="liTitle">{{user.username}}</view>
+        <view id="fllow" class="{{isfollowStyle}}" bindtap="fllowuser">{{isfollow}}</view>
+      </view>
+ 
+    <!--分割线-->
+      <view id="fenge"></view>
+      <!--他的歌单-->
+      <view class="modle2">
+        <view class="modleTitle">
+          <image src="/images/category.png" />
+          <text class="modletext1">UP主的歌单</text>
+        </view>
+        <view class="modleContent2">
+          <view class="modleLi3">
+            <image class="liimg2" src="/images/other/2.jpg" />
+            <view class="collection">
+              <image class="heartImg" src="/images/heart2.png" />
+              <text>56742</text>
+            </view>
+            <view class="catoragy"><text>邻居的耳朵</text></view>
+          </view>
+        </view>
+      </view>
+      <!--分割线-->
+      <view id="fenge"></view>
+    <!--音单-->
+      <view class="modle">
+        <view class="modleTitle">
+          <image src="/images/myin.png" />
+          <text class="modletext1">您可能感兴趣</text>
+          <image src="/images/go2.png" />
+          <text class="modletext2">更多</text>
+        </view>
+        <view class="modleContent">
+          <navigator url="/pages/view/view" hover-class="navigator-hover" class="modleLi">
+            <image class="liimg" src="/images/other/timg.jpg" />
+            <image class="liplay" src="/images/play3.png" />
+            <view class="liTitle2">【民谣】成都</view>
+            <view class="liSum2">
+              <image src="/images/play2.png" />
+              <text class="litext12">2189</text>
+              <text class="litext22">78</text>
+              <image src="/images/prise.png" />
+            </view>
+          </navigator>
+          <view class="modleLi">
+            <image class="liimg" src="/images/other/2.jpg" />
+            <image class="liplay" src="/images/play3.png" />
+            <view class="liTitle2">聆听大自然的声音</view>
+            <view class="liSum2">
+              <image src="/images/play2.png" />
+              <text class="litext12">2189</text>
+              <text class="litext22">78</text>
+              <image src="/images/prise.png" />
+            </view>
+          </view>
+          <view class="modleLi">
+            <image class="liimg" src="/images/other/5.jpg" />
+            <image class="liplay" src="/images/play3.png" />
+            <view class="liTitle2">【3D环绕】立体感受这个世界</view>
+            <view class="liSum2">
+              <image src="/images/play2.png" />
+              <text class="litext12">2189</text>
+              <text class="litext22">78</text>
+              <image src="/images/prise.png" />
+            </view>
+          </view>  
+        </view>
+      </view>
+    </view>
+    <!--评论-->
+    <view id="comment" class=" {{select !='comment' ? 'none':''}}">
+      <view id="prise">
+        <form bindsubmit="comment">
+          <input id="comment_input" name="content" placeholder="快说话，看我干什么(｡・`ω´･))" value="{{reset}}" confirm-type="send" bindconfirm="comment"/> 
+          <button id="send" form-type="submit" >
+            <text >发送</text>
+          </button>
+        </form>
+      </view>
+      <block wx:if="{{comments.length>0}}">
+        <block wx:for="{{comments}}" wx:for-index="key" wx:for-item="val">
+          <view id="comment_list">
+            <view id="commentinfo">
+              <image class="advImg2" src="{{val.useravatar?val.useravatar:'/images/avatar.png'}}" />
+              <view class="liTitle2">{{val.username?val.username:'无名英雄'}}</view>
+              <view class="liTitle3">{{val.created}}</view>
+              <view id="fllow2">
+                <image  bindtap="good" src="/images/view/zanbi1.png" />
+                <view>5</view>
+              </view>        
+            </view>
+            <view id="commentconent">{{val.content}}</view>
+            <view id="fenge"></view>
+          </view>
+        </block>
+      </block>
+      <block wx:if="{{comments.length==0}}">
+        <view id="nothing">
+          <image class="nothing" src="{{nocomment}}"></image>
+        </view>
+      </block>
+    </view>
+    <view id="thephoto"  class=" {{select !='photo' ? 'none':''}}">
+       <image  src="{{photo}}"></image>
+    </view>
+    <!--底部操作栏-->
+    <view id="bottom">
+      <image class="prvmusic" bindtap="prvmusic" src="/images/view/prv_music.png" />   
+      <image class="bback"  bindtap="back" src="/images/view/back.png" />  
+      <image class="bplay" bindtap="audioPlay" src="{{playimg}}" />  
+      <image class="bgoo"  bindtap="forward" src="/images/view/goo.png" />
+      <image class="nextmusic" bindtap="nextmusic" src="/images/view/next_music.png" />
+    </view>
+    <!--底部踮脚-->
+    <view id="bottomDian">
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+
+<!--index.wxml-->
+<view class="container1">
+  <navigator url="/pages/message/index" hover-class="navigator-hover" class="userinfo">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view id="box">
+      <view id="name">{{userInfo.nickName}}</view>
+      <view id="ihao">
+        <text>i号666</text>
+      </view>
+      <view id="yinbi">i音币：2221</view>
+    </view>
+    <image class="next" src="/images/next.png"></image>
+  </navigator>
+  <view id="content">
+    <view  hover-class="navigator-hover" class="list">
+      <text >2G/3G/4G自动播放</text>
+      <view class="next">
+        <switch type="default" checked="{{autoPlay}}" bindchange="listenerAutoplay"/>
+      </view>
+    </view>
+    <view hover-class="navigator-hover" class="list">
+      <text >原音音质</text>
+      <view class="next">
+        <switch type="default" checked="{{hifi}}" bindchange="listenerYinzhi"/>
+      </view>
+    </view>
+    <view  bindtap="clearCookie" hover-class="navigator-hover" class="list">
+      <text >清空缓存</text>
+      <image class="next2" src="/images/next.png"></image>
+    </view>
+    <navigator url="navigate?title=navigate" hover-class="navigator-hover" class="list">
+      <text >关于i音声</text>
+      <image class="next2" src="/images/next.png"></image>
+    </navigator>
+  </view>
+  
+</view>
